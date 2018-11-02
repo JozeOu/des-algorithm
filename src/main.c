@@ -26,12 +26,21 @@ int main() {
 	
 	// DES加密
 	encrypt(plain, cipher);
+	printf("你的明文已被加密\n");
+
+	printf("请输入密钥来进行解密：");
+	scanf("%s", keyStr);
+	BytesToBits(keyStr, key);
+	GenerateSubKeys();
+
+	// DES解密
 	decrypt(cipher, result);
 
 	// 将解密结果转换char数组
 	BitsToBytes(result, resultStr);
 
-	printf("%s\n", resultStr);
+	printf("解密得到的明文为：%s\n", resultStr);
+	printf("如果你输入了正确的密钥，则该结果与原明文一样；否则，该结果将不同与原明文\n");
 
 	return 0;
 }

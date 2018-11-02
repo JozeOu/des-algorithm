@@ -155,7 +155,7 @@ void encrypt(bool* plain, bool* cipher) {
 		Feistel(right, subKey[round], fresult);
 		for (i = 0; i < 32; ++i)
 		{
-			right[i] = left[i] == right[i] ? 0 : 1;
+			right[i] = left[i] == fresult[i] ? 0 : 1;
 		}
 		for (i = 0; i < 32; ++i)
 		{
@@ -216,7 +216,7 @@ void decrypt(bool* cipher, bool* plain) {
 		Feistel(right, subKey[15-round], fresult);
 		for (i = 0; i < 32; ++i)
 		{
-			right[i] = left[i] == right[i] ? 0 : 1;
+			right[i] = left[i] == fresult[i] ? 0 : 1;
 		}
 		for (i = 0; i < 32; ++i)
 		{
