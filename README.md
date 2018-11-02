@@ -40,7 +40,7 @@
 ## 编译运行结果
 
 1）加密后，输入正确的密钥，解密成功
-![](https://github.com/JozeOu/des-algorithm/tree/master/images/wrong.png)
+![](https://github.com/JozeOu/des-algorithm/blob/master/images/corrected.png?raw=true)
 
 2）加密后，输入错误的密钥，解密失败，得到错误的明文
-![](https://github.com/JozeOu/des-algorithm/tree/master/images/corrected.png)
+![](https://github.com/JozeOu/des-algorithm/blob/master/images/wrong.png?raw=true)
